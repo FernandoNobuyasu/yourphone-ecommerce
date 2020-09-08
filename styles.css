@@ -1,0 +1,543 @@
+/*********
+ * Reset *
+ *********/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*************pro
+ * Variables *
+ *************/
+:root {
+    --bg-color: #ffe2df;
+    --txt-color: #555555;
+    --btn-color: lightblue;
+    --btn-text-color: #fff;
+    --btn-hover-color: rgb(102, 184, 211);
+}
+
+/***********
+ * General *
+ ***********/
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+p{
+    font-size: 14px;
+    color:var(--txt-color);
+}
+
+.title{
+    text-align: center;
+    margin: 0 auto 50px;
+    position: relative;
+    line-height: 60px;
+    color: var(--txt-color);
+}
+.title::after{
+    content: "";
+    background: var(--btn-color);
+    width: 100px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/**********
+ * Header *
+ **********/
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    z-index: 10;
+    background: white;
+    border-bottom: 2px solid rgb(175, 236, 247);
+
+}
+
+.logo img{
+    display: block;
+}
+
+.search-bar {
+    size: 100px;
+    display: inline-flex;
+    border: 1px solid var(--txt-color);
+    border-radius: 30px;
+    height: 30px;
+    width: 30px;
+    position: relative;
+    vertical-align: middle;
+    transition: width 300ms;
+    overflow: hidden;
+    margin-right: 20px;
+}
+.search-bar:focus-within{
+    width: 200px;
+}
+
+.search-bar:focus-within .search-txt{
+    opacity: 1;
+}
+
+.search-txt{
+    color: black;
+    flex-grow: 1;
+    padding: 0 10px;
+    border: 0;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 30px;
+    width: 175px;
+    opacity: 0;
+    transition: opacity 300ms;
+}
+
+.search-txt:focus{
+    outline: 0;
+}
+
+.search-btn{
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    padding: 6px;
+    border-radius: 50%;
+}
+
+nav{
+    padding-right: 10px;
+}
+
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+    max-height: 200px;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 20px;
+}
+
+.shop-btn{
+    display: inline-block;
+    margin: 20px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+header a{
+    text-decoration: none;
+    color: var(--txt-color);
+}
+
+/********
+ * Site *
+ ********/
+
+.site{
+    margin-top: 84px;
+}
+
+/*************************
+ * Galaxy s20 Disclaimer *
+ *************************/
+
+.s20-container{
+    padding: 40px 30px 40px 40px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.s20-col{
+    flex-basis: 50%;
+    min-width: 350px;
+}
+
+.s20-container img{
+    max-width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.s20-container h1{
+    font-size: 50px;
+    line-height: 60px;
+}
+
+.s20-container h2{
+    margin: 0 0 15px 0;
+}
+
+.btn{
+    text-decoration: none;
+    display: inline-block;
+    background: var(--btn-color);
+    color: var(--btn-text-color);
+    padding: 8px 30px;
+    margin: 20px 0;
+    border-radius: 30px;
+    transition: background 300ms;
+}
+
+.btn:hover{
+    background: var(--btn-hover-color);
+}
+
+/************
+ * Products *
+ ************/
+
+.products-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-top: 20px;
+}
+
+.products-col{
+    flex-basis: 25%;
+    padding: 20px;
+    min-width: 200px;
+    margin-bottom: 30px;
+    transition: transform 300ms;
+    cursor: pointer;
+}
+
+.products-col:hover{
+    transform: translateY(-5px);
+}
+
+.products-container img{
+     width: 100%;
+}
+
+.products-container h4{
+    color: var(--txt-color);
+    font-weight: normal;
+}
+
+.rating{
+    color: lightblue;
+}
+
+/**********
+* Feeback *
+**********/
+
+.feedback-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.feedback-col{
+    padding: 15px;
+    flex-basis: 25%;
+    min-width: 250px;
+    margin-bottom: 30px;
+    text-align: center;
+    page-break-after: 40px 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.feedback-container img{
+    width: 60px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+
+.feedback-container p{
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.feedback-container h3{
+    font-weight: 600;
+    color: var(--txt-color);
+    font-size: 14px;
+}
+
+.fa-quote-left, .fa-quote-right{
+    color: rgb(151, 211, 231);
+}
+
+/*********
+* Brands *
+**********/
+.brands-container{
+    max-width: 1080px;
+    margin: 80px auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.brands-col{
+    width: 160px;
+}
+
+.brands-col img{
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(100%);
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+
+}
+
+#col-apple{
+    max-width: 30px;
+    margin-right: 20px;
+}
+
+#logo-apple{
+    max-height: 40px;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.brands-col img:hover{
+    filter: grayscale(0);
+
+}
+
+/*********
+* Footer *
+**********/
+.footer{
+    background: black;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 40px 0 20px;
+}
+
+.footer h3{
+    color: white;
+    margin-bottom: 20px;
+}
+
+.footer-links, .footer-social, .footer-payment{
+ min-width: 250px;
+ margin-bottom: 20px;  
+ text-align: center;
+ flex-basis: 12%;
+}
+
+ul{
+    list-style-type: none;
+}
+
+ul li{
+    cursor: pointer;
+}
+
+.pay-imgs{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.footer-payment img{
+    width: 50px;
+    padding: 5px;
+}
+
+/**************
+* Mobile Menu *
+***************/
+
+ .menu-btn{
+    width: 28px;
+    margin-left: 20px;
+    vertical-align: middle;
+    display: none;
+    cursor: pointer;
+ }
+ 
+/* ----- Media querry for menu ----- */
+ @media only screen and (max-width: 1050px){
+    nav ul{
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background: #333333;
+    width: 120px;
+    text-align: right;
+    overflow: hidden;
+    transition: max-height 300ms;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 10px 20px 10px auto;
+    }
+
+    nav ul li a{
+        color: rgb(233, 233, 233);
+    }
+
+    .menu-btn{
+        display: inline-block;
+    }
+}
+
+/***************
+* All Products *
+****************/
+
+.row-2{
+    justify-content: space-between;
+    margin: 40px auto;
+}
+
+select{
+    border: 1px solid #878ff5;
+    padding: 5px;
+}
+
+select:focus{
+    outline: none;
+}
+
+.page-btn{
+    margin: 0 auto 40px;
+}
+
+.page-btn span{
+    display: inline-block;
+    border: 1px solid #878ff5;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.page-btn span:hover{
+    background: #9299fc;
+    color: white;
+}
+/******************
+* Single Products *
+*******************/
+
+.sp-container{
+    max-width: 1200px;
+    padding: 60px 100px 40px 100px;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.sp-col img{
+    padding: 0;
+}
+
+.sp-col{
+    flex-basis: 50%;
+    padding: 20px;
+}
+
+.sp-container h4{
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.sp-container select{
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.sp-container input{
+    width: 40px;
+    height: 30px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    border: 1px solid #9299fc;
+}
+
+input:focus{
+    outline: none;
+}
+
+.product-info h3{
+font-size: 18px;
+}
+
+.product-info h4{
+    font-size: 16px;
+    margin: 10px 0 0 0;
+}
+
+.small-img-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+/* ----- Media querry for screen smaller than 790 px ----- */
+@media only screen and (max-width: 790px){
+    .s20-col{
+        flex-basis: 100%;
+    }
+}
+
+/* ----- Media querry for screen smaller than 600 px ----- */
+@media only screen and (max-width: 600px){
+    .row{
+        text-align: center;
+    }
+
+    .s20-col, .feedback-col, .products-col{
+        flex-basis: 100%;
+    }
+    
+    .brands-col{
+        flex-basis: 50%;
+    }
+
+    .search-bar{
+        opacity: 0;
+    }
+}
